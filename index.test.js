@@ -46,3 +46,15 @@ test('addition test negatives', () => {
 test('addition test positive and negative', () => {
     expect(string.calculator.add(-1, 2)).toBe(1);
 })
+
+test('Subtraction test positives', () => {
+    expect(string.calculator.subtract(1, 2)).toBe(-1);
+})
+
+test('Subtraction test negatives', () => {
+    expect(string.calculator.subtract(-1,-2)).toBe(1);
+})
+
+test('Subtraction test positive and negative', () => {
+    expect(string.calculator.subtract(-1, 2)).toBe(-3);
+})
