@@ -75,3 +75,24 @@ test('Multiplication test with 0', () => {
     expect(string.calculator.multiply(0,1)).toBe(0);
 })
 
+test('Division test positives', () => {
+    expect(string.calculator.divide(2, 1)).toBe(2);
+})
+
+test('Division test negatives', () => {
+    expect(string.calculator.divide(-2,-1)).toBe(2);
+})
+
+test('Division test positive and negative', () => {
+    expect(string.calculator.divide(-2, 1)).toBe(-2);
+})
+
+test('Division test with 0 as numerator', () => {
+    expect(string.calculator.divide(0, 1)).toBe(0);
+})
+
+test('Division test 0 as denominator', () => {
+    expect(string.calculator.divide(1, 0)).toBe('Math Error');
+})
+
+
