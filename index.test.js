@@ -58,3 +58,20 @@ test('Subtraction test negatives', () => {
 test('Subtraction test positive and negative', () => {
     expect(string.calculator.subtract(-1, 2)).toBe(-3);
 })
+
+test('Multiplication test positives', () => {
+    expect(string.calculator.multiply(1, 2)).toBe(2);
+})
+
+test('Multiplication test negatives', () => {
+    expect(string.calculator.multiply(-1,-2)).toBe(2);
+})
+
+test('Multiplication test positive and negative', () => {
+    expect(string.calculator.multiply(-1, 2)).toBe(-2);
+})
+
+test('Multiplication test with 0', () => {
+    expect(string.calculator.multiply(0,1)).toBe(0);
+})
+
