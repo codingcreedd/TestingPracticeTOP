@@ -23,7 +23,10 @@ const calculator = {
     },
 
     divide: function(a, b){
-        return a / b;
+        if(b == 0)
+            return 'Math Error';
+        else
+            return a / b;
     },
 
     multiply: function(a, b){
