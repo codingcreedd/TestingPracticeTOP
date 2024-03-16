@@ -1,4 +1,5 @@
 const string = require('./index');
+const array = require('./index');
 
 test('capitilize 1', () => {
     expect(string.capitilize('marwan')).toBe('Marwan');
@@ -93,6 +94,10 @@ test('Division test with 0 as numerator', () => {
 
 test('Division test 0 as denominator', () => {
     expect(string.calculator.divide(1, 0)).toBe('Math Error');
+})
+
+test('Array test', () => {
+    expect(array.analyzeArray([1,8,3,4,2,6])).toEqual({average: 4, min: 1, max: 8, size: 6});
 })
 
 
