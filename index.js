@@ -1,3 +1,4 @@
+//INDEX.JS
 function capitilize(str)
 {
     return str.charAt(0).toUpperCase() + str.slice(1);
@@ -34,8 +35,56 @@ const calculator = {
     }
 }
 
+function analyzeArray(arr)
+{
+    const average = (array) => {
+        let sum = 0;
+        for(let i = 0; i < array.length; i++)
+            sum += array[i];
+
+        return sum / array.length;
+    }
+
+    const min = (array) => {
+        let min = 0;
+        if(array.length > 0)
+            min = array[0];
+
+        for(let i = 0; i < array.length; i++)
+        {
+            if(array[i] < min)
+                min = array[i];
+        }
+
+        return min;
+    }
+
+    const max = (array) => {
+        let max = 0;
+        for(let i = 0; i < array.length; i++)
+        {
+            if(array[i] > max)
+                max = array[i];
+        }
+
+        return max;
+    }
+
+    const size = (array) => {
+        return array.length;
+    }
+
+    return{
+        average: average(arr),
+        min: min(arr),
+        max: max(arr),
+        size: size(arr)
+    }
+}
+
 module.exports = {
     capitilize,
     reverse,
-    calculator
+    calculator,
+    analyzeArray
 }
